@@ -4,8 +4,8 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ["airbnb", "plugin:prettier/recommended"],
-  plugins: ["prettier"],
+  extends: ["airbnb", "prettier"],
+  plugins: [],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -13,7 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  rules: {
-    "prettier/prettier": "error",
-  },
+  ignorePatterns: ["!.*.js"],
+  rules: {},
 };
