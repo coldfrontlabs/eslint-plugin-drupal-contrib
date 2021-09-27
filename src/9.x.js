@@ -15,8 +15,11 @@ module.exports = {
     Backbone: true,
     Modernizr: true,
     Popper: true,
+    Shepherd: true,
     Sortable: true,
+    once: true,
     CKEDITOR: true,
+    tabbable: true,
   },
   settings: {
     react: {
