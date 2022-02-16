@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.1.1...v1.1.2) (2022-02-16)
+
+
+### Build System
+
+* **npm:** update dependencies ([08d138b](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/08d138ba08aac91c38282a31d8f1349bb8735b9d))
+* update lint config ([6ccdfa8](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/6ccdfa88ef28f43df7c4d30f118a6a32b15847a6))
+
 ### [1.1.1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.1.0...v1.1.1) (2021-12-21)
 
 
