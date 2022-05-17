@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ["airbnb", "plugin:prettier/recommended"],
+  extends: ["airbnb", "plugin:prettier/recommended", "plugin:yml/recommended"],
+  root: true,
   env: {
     browser: true,
     es6: true,
@@ -14,16 +15,18 @@ module.exports = {
     Cookies: true,
     Backbone: true,
     Modernizr: true,
+    loadjs: true,
     Popper: true,
     Shepherd: true,
     Sortable: true,
     once: true,
     CKEDITOR: true,
+    CKEditor5: true,
     tabbable: true,
   },
   settings: {
     react: {
-      version: "latest",
+      version: "detect",
     },
   },
   rules: {
