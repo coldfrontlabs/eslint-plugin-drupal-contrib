@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ["airbnb", "plugin:prettier/recommended", "plugin:yml/recommended"],
+  extends: [
+    "airbnb-base",
+    "plugin:prettier/recommended",
+    "plugin:yml/recommended",
+  ],
   root: true,
   env: {
     browser: true,
@@ -23,11 +27,6 @@ module.exports = {
     CKEDITOR: true,
     CKEditor5: true,
     tabbable: true,
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
   },
   rules: {
     "prettier/prettier": "error",
@@ -59,5 +58,6 @@ module.exports = {
       "after",
       { overrides: { "?": "ignore", ":": "ignore" } },
     ],
+    "yml/indent": ["error", 2],
   },
 };
