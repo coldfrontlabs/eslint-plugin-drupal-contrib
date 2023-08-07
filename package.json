@@ -36,7 +36,7 @@
   "homepage": "https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib#readme",
   "dependencies": {
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
