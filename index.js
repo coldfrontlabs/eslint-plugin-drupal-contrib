@@ -1,7 +1,7 @@
-const core9x = require("./src/9.x");
+import recommended from "./src/recommended";
 
 module.exports = {
   configs: {
-    "9.x": core9x,
+    recommended,
   },
 };

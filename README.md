@@ -7,18 +7,18 @@
 
 An ESLint plugin to match the [Drupal standard](https://www.drupal.org/node/1955232) for contrib modules and themes.
 
-Extends [eslint-config-airbnb](https://github.com/airbnb/javascript) and [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+Extends [eslint-config-airbnb](https://github.com/airbnb/javascript) and [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
 
 For more detail on the rules implemented, see the config itself:
 
-- [9.x](./src/9.x.js)
+- [recommended](./src/recommended.js)
 
 ## Installation
 
 ```shell
 # latest stable
-npm install eslint prettier --save-dev
-npm install eslint-plugin-drupal-contrib --save-dev
+npm install eslint@8 prettier@3 --save-dev
+npm install eslint-plugin-drupal-contrib@2 --save-dev
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ npm install eslint-plugin-drupal-contrib --save-dev
 Add the following to your eslint configuration file
 
 ```jsx
-extends: ["plugin:drupal-contrib/9.x"]
+extends: ["plugin:drupal-contrib/recommended"]
 ```
 
 ## Versioning
