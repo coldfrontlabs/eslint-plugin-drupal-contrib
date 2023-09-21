@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.0-beta.1...v2.0.0) (2023-09-21)
+
+
+### Documentation
+
+* update docs to add other official configs from core ([5f65e09](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/5f65e09f0ca9b493131662f546a14902b4e146a6))
+
 ## [2.0.0-beta.1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-09-21)
 
 
