@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.2.1...v2.0.0-beta.0) (2023-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **config:** Projects using the 9.x plugin will need to change to the recommended plugin
+* Projects using the 8.x plugin will no longer work.
+
+### Features
+
+* **config:** add other official drupal configs for 9.x ([100d9af](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/100d9af1c4d19c0160e70bbb5dda00745482d385))
+* **config:** update 9.x config and rename to recommended ([e286aae](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/e286aae56fc49e69990990a72af91a184e68d9ec))
+* remove drupal 8 support ([8d01c4d](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/8d01c4d0386d799f1709b348b067dca6bdc22203))
+
+
+### Build System
+
+* **npm:** update all dependencies to latest ([511b6d5](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/511b6d5965a9392e650727e0202a3611243bf737))
+
 ### [1.2.1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.2.0...v1.2.1) (2023-09-21)
 
 
