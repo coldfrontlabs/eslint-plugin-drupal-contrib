@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-drupal-contrib",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An ESLint plugin to match the Drupal standard for contrib modules and themes.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
