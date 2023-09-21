@@ -5,7 +5,6 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "src/8.x.js",
     "src/9.x.js"
   ],
   "scripts": {
