@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.2.0...v1.2.1) (2023-09-21)
+
+
+### Documentation
+
+* **github:** update to reflect change to 1.x branch ([d375f07](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/d375f07f90e3107b4059945f68419c00428f570d))
+
+
+### Build System
+
+* bump eslint-plugin-yml from 0.15.0 to 1.0.0 ([060d616](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/060d6163675f0c287bf8868e30a6a18cef944b82))
+* bump lint-staged from 12.5.0 to 13.0.1 ([c28396e](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/c28396e9aa60fc324427a92210267112b85b2544))
+* bump prettier from 2.8.8 to 3.0.0 ([6b0fc0c](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/6b0fc0c0cd3f98ecdf600b2e7ab17b5d8bb50842))
+* **codeql:** update to check against *.x branches ([9230835](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/9230835f07ef47567ce6ce52675ba07a570831a8))
+
 ## [1.2.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v1.1.2...v1.2.0) (2022-05-18)
 
 
