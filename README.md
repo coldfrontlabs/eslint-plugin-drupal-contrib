@@ -12,6 +12,9 @@ Extends [eslint-config-airbnb](https://github.com/airbnb/javascript) and [eslint
 For more detail on the rules implemented, see the config itself:
 
 - [recommended](./src/recommended.js)
+- [jquery](./src/jquery.js)
+- [legacy](./src/legacy.js)
+- [passing](./src/passing.js)
 
 ## Installation
 
@@ -23,12 +26,35 @@ npm install eslint-plugin-drupal-contrib@2 --save-dev
 
 ## Usage
 
-### Drupal 9.x
+### Recommended
 
 Add the following to your eslint configuration file
 
 ```jsx
 extends: ["plugin:drupal-contrib/recommended"]
+```
+### jQuery
+
+Add the following to your eslint configuration file
+
+```jsx
+extends: ["plugin:drupal-contrib/jquery"]
+```
+
+### Legacy
+
+Add the following to your eslint configuration file
+
+```jsx
+extends: ["plugin:drupal-contrib/legacy"]
+```
+
+### Passing
+
+Add the following to your eslint configuration file
+
+```jsx
+extends: ["plugin:drupal-contrib/passing"]
 ```
 
 ## Versioning
