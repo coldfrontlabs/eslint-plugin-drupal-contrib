@@ -3,7 +3,7 @@ import jquery from "./src/jquery";
 import legacy from "./src/legacy";
 import passing from "./src/passing";
 
-module.exports = {
+export default {
   configs: {
     recommended,
     jquery,
