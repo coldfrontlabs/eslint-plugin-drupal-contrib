@@ -23,7 +23,7 @@
     "prerelease": "npm run lint && npm run build",
     "release": "git add src/. dist/. && git add index.js && standard-version -a",
     "prepare": "husky install",
-    "build": "rollup --config rollup.config.js"
+    "build": "rollup --config rollup.config.mjs"
   },
   "repository": {
     "type": "git",

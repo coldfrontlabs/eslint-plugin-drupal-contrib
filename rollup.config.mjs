@@ -1,6 +1,6 @@
 const formats = ["cjs", "es"];
 
-module.exports = () => {
+export default () => {
   return {
     input: "index.js",
     output: formats.map((format) => ({
