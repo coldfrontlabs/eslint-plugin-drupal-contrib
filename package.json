@@ -16,14 +16,14 @@
     "dist/"
   ],
   "scripts": {
+    "prepare": "husky install",
     "commit": "git cz",
     "lint": "npm run eslint -- --fix && npm run prettier -- --write",
     "eslint": "eslint --ext .js,.mjs --ignore-path .gitignore .",
     "prettier": "prettier '**/*.{js,mjs}' --ignore-path .gitignore",
-    "prerelease": "npm run lint && npm run build",
+    "build": "rollup --config rollup.config.mjs",
     "release": "git add src/. dist/. && git add index.js && standard-version -a",
-    "prepare": "husky install",
-    "build": "rollup --config rollup.config.mjs"
+    "prerelease": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
