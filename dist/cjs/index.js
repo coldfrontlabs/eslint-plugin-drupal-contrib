@@ -1,6 +1,6 @@
 "use strict";
 
-const recommended = {
+var recommended = {
   extends: [
     "airbnb-base",
     "plugin:prettier/recommended",
@@ -64,7 +64,7 @@ const recommended = {
   },
 };
 
-const jquery = {
+var jquery = {
   plugins: ["jquery"],
   rules: {
     "jquery/no-ajax": 0,
@@ -119,7 +119,7 @@ const jquery = {
   },
 };
 
-const legacy = {
+var legacy = {
   extends: "eslint:recommended",
   root: true,
   env: {
@@ -223,7 +223,7 @@ const legacy = {
   },
 };
 
-const passing = {
+var passing = {
   extends: [
     "plugin:drupal-contrib/recommended",
     "plugin:drupal-contrib/jquery",
@@ -243,7 +243,7 @@ const passing = {
   },
 };
 
-const index = {
+var index = {
   configs: {
     recommended,
     jquery,
