@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.1...v2.0.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* **dist:** do not lint dist directory ([679c20c](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/679c20cf16b9dc10a9bf140c15891c4e8914cbef))
+* **package:** correct module path ([a24a176](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/a24a17639af2aa67b2b040495c57ed9960bddd8d))
+
+
+### Build System
+
+* ensure mjs files are linted ([a1096e1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/a1096e1a95d32ac30df6efbfc966fc74242cc1df))
+* **rollup:** update rollup to es module ([cf37a01](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/cf37a017e7c1514cf077e5b86307e5342c2c680e))
+
 ### [2.0.1](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.0...v2.0.1) (2023-09-21)
 
 
