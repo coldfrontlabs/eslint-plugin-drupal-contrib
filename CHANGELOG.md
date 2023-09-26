@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.2...v2.0.3) (2023-09-26)
+
+
+### Build System
+
+* **actions:** add build and lint tests ([eaeaa13](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/eaeaa137ade5d797815b529cab686c872bb194ba))
+* **actions:** update checkout to v4 ([964ff6f](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/964ff6f576a6c1778babd8f16d99c45f814e6eec))
+* **codeql:** use latest codeql action for all jobs ([c32d5e8](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/c32d5e80d49641f6fe6244d2f0a6b5564d3b6843))
+
+
+### Documentation
+
+* **readme:** add tests and codeql status ([9f877fa](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/9f877fa827e8a21b8614de4b541584cc4740be20))
+
 ### [2.0.2](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.1...v2.0.2) (2023-09-22)
 
 
