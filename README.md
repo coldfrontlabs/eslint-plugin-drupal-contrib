@@ -2,7 +2,8 @@
 
 [![Latest release](https://img.shields.io/github/v/release/coldfrontlabs/eslint-plugin-drupal-contrib?include_prereleases&style=for-the-badge)](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/releases)
 [![License](https://img.shields.io/github/license/coldfrontlabs/eslint-plugin-drupal-contrib?style=for-the-badge)](/LICENSE)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=for-the-badge)](https://conventionalcommits.org)
+[![Tests](https://img.shields.io/github/actions/workflow/status/coldfrontlabs/eslint-plugin-drupal-contrib/test.yml?branch=4.x&label=Tests&style=for-the-badge)](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/actions/workflows/test.yml)
+[![GitHub CodeQL](https://img.shields.io/github/actions/workflow/status/coldfrontlabs/eslint-plugin-drupal-contrib/codeql-analysis.yml?branch=4.x&label=CodeQL&style=for-the-badge)](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/actions/workflows/codeql-analysis.yml)
 [![Drupal Version](https://img.shields.io/badge/Drupal-9.x-blue?style=for-the-badge)](https://www.drupal.org/project/drupal)
 
 An ESLint plugin to match the [Drupal standard](https://www.drupal.org/node/1955232) for contrib modules and themes.
