@@ -1,5 +1,14 @@
 "use strict";
 
+var eslintrc = require("@eslint/eslintrc");
+var path = require("path");
+var url = require("url");
+var globals = require("globals");
+var prettier = require("eslint-config-prettier");
+var yml = require("eslint-plugin-yml");
+
+var _documentCurrentScript =
+  typeof document !== "undefined" ? document.currentScript : null;
 var recommended = {
   extends: [
     "airbnb-base",
@@ -243,12 +252,103 @@ var passing = {
   },
 };
 
+var core = {
+  Drupal: false,
+  drupalSettings: false,
+  drupalTranslations: false,
+  once: false,
+  jQuery: false,
+  _: false,
+  Cookies: false,
+  Backbone: false,
+  loadjs: false,
+  Modernizr: false,
+  Popper: false,
+  Shepherd: false,
+  Sortable: false,
+  CKEDITOR: false,
+  CKEditor5: false,
+  tabbable: false,
+};
+var drupalGlobals = {
+  core: core,
+};
+
+// Get the recommended configurations from the plugins.
+const ymlRecommended = yml.configs["flat/recommended"];
+
+// Set up common variables.
+const __filename$1 = url.fileURLToPath(
+  typeof document === "undefined"
+    ? require("u" + "rl").pathToFileURL(__filename).href
+    : (_documentCurrentScript && _documentCurrentScript.src) ||
+        new URL("index.js", document.baseURI).href
+);
+const __dirname$1 = path.dirname(__filename$1);
+
+// Create a new FlatCompat instance.
+const compat = new eslintrc.FlatCompat({
+  baseDirectory: __dirname$1,
+});
+
+// Set up the config.
+const config = {
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.es2021,
+      ...globals.node,
+      ...drupalGlobals.core,
+    },
+  },
+  rules: {
+    "prettier/prettier": "error",
+    "consistent-return": ["off"],
+    "no-underscore-dangle": ["off"],
+    "max-nested-callbacks": ["warn", 3],
+    "import/no-mutable-exports": ["warn"],
+    "no-plusplus": [
+      "warn",
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
+    "no-param-reassign": ["off"],
+    "no-prototype-builtins": ["off"],
+    "valid-jsdoc": [
+      "warn",
+      {
+        prefer: {
+          returns: "return",
+          property: "prop",
+        },
+        requireReturn: false,
+      },
+    ],
+    "no-unused-vars": ["warn"],
+    "operator-linebreak": [
+      "error",
+      "after",
+      { overrides: { "?": "ignore", ":": "ignore" } },
+    ],
+    "yml/indent": ["error", 2],
+  },
+};
+
+var flatRecommended = [
+  ...compat.extends("airbnb-base"),
+  prettier,
+  ymlRecommended,
+  config,
+];
+
 var index = {
   configs: {
     recommended,
     jquery,
     legacy,
     passing,
+    "flat/recommended": flatRecommended,
   },
 };
 

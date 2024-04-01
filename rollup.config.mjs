@@ -1,3 +1,5 @@
+import json from "@rollup/plugin-json";
+
 const formats = ["cjs", "es"];
 
 export default () => {
@@ -7,5 +9,14 @@ export default () => {
       file: `dist/${format}/index.js`,
       format,
     })),
+    plugins: [json()],
+    external: [
+      "url",
+      "path",
+      "@eslint/eslintrc",
+      "globals",
+      "eslint-plugin-yml",
+      "eslint-config-prettier",
+    ],
   };
 };

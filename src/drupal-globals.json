@@ -1,0 +1,20 @@
+{
+  "core": {
+    "Drupal": false,
+    "drupalSettings": false,
+    "drupalTranslations": false,
+    "once": false,
+    "jQuery": false,
+    "_": false,
+    "Cookies": false,
+    "Backbone": false,
+    "loadjs": false,
+    "Modernizr": false,
+    "Popper": false,
+    "Shepherd": false,
+    "Sortable": false,
+    "CKEDITOR": false,
+    "CKEditor5": false,
+    "tabbable": false
+  }
+}
