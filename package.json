@@ -2,6 +2,7 @@
   "name": "eslint-plugin-drupal-contrib",
   "version": "2.0.3",
   "description": "An ESLint plugin to match the Drupal standard for contrib modules and themes.",
+  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "exports": {
@@ -19,9 +20,9 @@
     "prepare": "husky install",
     "commit": "git cz",
     "lint": "npm run eslint -- --fix && npm run prettier -- --write",
-    "eslint": "eslint --ext .js,.mjs --ignore-path .gitignore .",
-    "prettier": "prettier '**/*.{js,mjs}' --ignore-path .gitignore",
-    "build": "rollup --config rollup.config.mjs",
+    "eslint": "eslint .",
+    "prettier": "prettier '**/*.{js,cjs}'",
+    "build": "rollup --config rollup.config.js",
     "release": "git add src/. dist/. && git add index.js && standard-version -a",
     "prerelease": "npm run lint && npm run build"
   },
@@ -59,6 +60,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
+    "@eslint/js": "^8.57.0",
     "@rollup/plugin-json": "^6.1.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",

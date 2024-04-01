@@ -6,9 +6,6 @@ import prettier from "eslint-config-prettier";
 import yml from "eslint-plugin-yml";
 import drupalGlobals from "../drupal-globals.json";
 
-// Get the recommended configurations from the plugins.
-const ymlRecommended = yml.configs["flat/recommended"];
-
 // Set up common variables.
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -65,6 +62,6 @@ const config = {
 export default [
   ...compat.extends("airbnb-base"),
   prettier,
-  ymlRecommended,
+  yml.configs["flat/recommended"],
   config,
 ];
