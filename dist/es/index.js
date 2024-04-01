@@ -1,9 +1,9 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import path from "path";
-import { fileURLToPath } from "url";
-import globals from "globals";
-import prettier from "eslint-config-prettier";
-import yml from "eslint-plugin-yml";
+import { FlatCompat } from '@eslint/eslintrc';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import globals from 'globals';
+import prettier from 'eslint-config-prettier';
+import yml from 'eslint-plugin-yml';
 
 var recommended = {
   extends: [
@@ -249,29 +249,26 @@ var passing = {
 };
 
 var core = {
-  Drupal: false,
-  drupalSettings: false,
-  drupalTranslations: false,
-  once: false,
-  jQuery: false,
-  _: false,
-  Cookies: false,
-  Backbone: false,
-  loadjs: false,
-  Modernizr: false,
-  Popper: false,
-  Shepherd: false,
-  Sortable: false,
-  CKEDITOR: false,
-  CKEditor5: false,
-  tabbable: false,
+	Drupal: false,
+	drupalSettings: false,
+	drupalTranslations: false,
+	once: false,
+	jQuery: false,
+	_: false,
+	Cookies: false,
+	Backbone: false,
+	loadjs: false,
+	Modernizr: false,
+	Popper: false,
+	Shepherd: false,
+	Sortable: false,
+	CKEDITOR: false,
+	CKEditor5: false,
+	tabbable: false
 };
 var drupalGlobals = {
-  core: core,
+	core: core
 };
-
-// Get the recommended configurations from the plugins.
-const ymlRecommended = yml.configs["flat/recommended"];
 
 // Set up common variables.
 const __filename = fileURLToPath(import.meta.url);
@@ -329,7 +326,7 @@ const config = {
 var flatRecommended = [
   ...compat.extends("airbnb-base"),
   prettier,
-  ymlRecommended,
+  yml.configs["flat/recommended"],
   config,
 ];
 

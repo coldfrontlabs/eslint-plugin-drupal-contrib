@@ -1,14 +1,13 @@
-"use strict";
+'use strict';
 
-var eslintrc = require("@eslint/eslintrc");
-var path = require("path");
-var url = require("url");
-var globals = require("globals");
-var prettier = require("eslint-config-prettier");
-var yml = require("eslint-plugin-yml");
+var eslintrc = require('@eslint/eslintrc');
+var path = require('path');
+var url = require('url');
+var globals = require('globals');
+var prettier = require('eslint-config-prettier');
+var yml = require('eslint-plugin-yml');
 
-var _documentCurrentScript =
-  typeof document !== "undefined" ? document.currentScript : null;
+var _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;
 var recommended = {
   extends: [
     "airbnb-base",
@@ -253,37 +252,29 @@ var passing = {
 };
 
 var core = {
-  Drupal: false,
-  drupalSettings: false,
-  drupalTranslations: false,
-  once: false,
-  jQuery: false,
-  _: false,
-  Cookies: false,
-  Backbone: false,
-  loadjs: false,
-  Modernizr: false,
-  Popper: false,
-  Shepherd: false,
-  Sortable: false,
-  CKEDITOR: false,
-  CKEditor5: false,
-  tabbable: false,
+	Drupal: false,
+	drupalSettings: false,
+	drupalTranslations: false,
+	once: false,
+	jQuery: false,
+	_: false,
+	Cookies: false,
+	Backbone: false,
+	loadjs: false,
+	Modernizr: false,
+	Popper: false,
+	Shepherd: false,
+	Sortable: false,
+	CKEDITOR: false,
+	CKEditor5: false,
+	tabbable: false
 };
 var drupalGlobals = {
-  core: core,
+	core: core
 };
 
-// Get the recommended configurations from the plugins.
-const ymlRecommended = yml.configs["flat/recommended"];
-
 // Set up common variables.
-const __filename$1 = url.fileURLToPath(
-  typeof document === "undefined"
-    ? require("u" + "rl").pathToFileURL(__filename).href
-    : (_documentCurrentScript && _documentCurrentScript.src) ||
-        new URL("index.js", document.baseURI).href
-);
+const __filename$1 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
 const __dirname$1 = path.dirname(__filename$1);
 
 // Create a new FlatCompat instance.
@@ -338,7 +329,7 @@ const config = {
 var flatRecommended = [
   ...compat.extends("airbnb-base"),
   prettier,
-  ymlRecommended,
+  yml.configs["flat/recommended"],
   config,
 ];
 
