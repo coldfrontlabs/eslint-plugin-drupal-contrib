@@ -66,4 +66,4 @@ const config = {
   },
 };
 
-export default [...compat.extends("jquery"), config];
+export default [...compat.plugins("jquery"), config];
