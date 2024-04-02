@@ -395,10 +395,7 @@ const config$2 = {
   },
 };
 
-var flatJquery = [
-  ...compat.extends("jquery"),
-  config$2,
-];
+var flatJquery = [...compat.plugins("jquery"), config$2];
 
 // Set up the config.
 const config$1 = {
@@ -494,10 +491,7 @@ const config$1 = {
   },
 };
 
-var flatLegacy = [
-  js.configs.recommended,
-  config$1,
-];
+var flatLegacy = [js.configs.recommended, config$1];
 
 // Set up the config.
 const config = {
@@ -513,13 +507,10 @@ const config = {
     "prefer-regex-literals": "off",
     "import/named": "off",
     "import/no-import-module-exports": "off",
-  },};
+  },
+};
 
-var flatPassing = [
-  flatRecommended,
-  flatJquery,
-  config,
-];
+var flatPassing = [flatRecommended, flatJquery, config];
 
 var index = {
   configs: {
