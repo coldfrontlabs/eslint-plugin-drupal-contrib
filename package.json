@@ -2,12 +2,13 @@
   "name": "eslint-plugin-drupal-contrib",
   "version": "2.0.3",
   "description": "An ESLint plugin to match the Drupal standard for contrib modules and themes.",
+  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "exports": {
     ".": {
       "import": "./dist/es/index.js",
-      "require": "./dist/cjs/index.js"
+      "require": "./dist/cjs/index.cjs"
     }
   },
   "files": [
@@ -19,11 +20,16 @@
     "prepare": "husky install",
     "commit": "git cz",
     "lint": "npm run eslint -- --fix && npm run prettier -- --write",
-    "eslint": "eslint --ext .js,.mjs --ignore-path .gitignore .",
-    "prettier": "prettier '**/*.{js,mjs}' --ignore-path .gitignore",
-    "build": "rollup --config rollup.config.mjs",
+    "eslint": "eslint .",
+    "prettier": "prettier '**/*.{js,cjs}'",
+    "build": "rollup --config rollup.config.js",
     "release": "git add src/. dist/. && git add index.js && standard-version -a",
-    "prerelease": "npm run lint && npm run build"
+    "prerelease": "npm run lint && npm run build",
+    "test": "npm run test:jquery && npm run test:legacy && npm run test:passing && npm run test:recommended",
+    "test:jquery": "eslint --config test/jquery/eslint.config.js test/jquery/*.js",
+    "test:legacy": "eslint --config test/legacy/eslint.config.js test/legacy/*.js",
+    "test:passing": "eslint --config test/passing/eslint.config.js test/passing/*.js",
+    "test:recommended": "eslint --config test/recommended/eslint.config.js test/recommended/*.js"
   },
   "repository": {
     "type": "git",
@@ -43,12 +49,14 @@
   },
   "homepage": "https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib#readme",
   "dependencies": {
+    "@eslint/eslintrc": "^3.0.2",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-yml": "^1.9.0"
+    "eslint-plugin-yml": "^1.9.0",
+    "globals": "^15.0.0"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0",
@@ -57,6 +65,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
+    "@eslint/js": "^8.57.0",
+    "@rollup/plugin-json": "^6.1.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.49.0",

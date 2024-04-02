@@ -1,11 +1,14 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import globals from 'globals';
-import prettier from 'eslint-config-prettier';
-import yml from 'eslint-plugin-yml';
-import js from '@eslint/js';
+'use strict';
 
+var eslintrc = require('@eslint/eslintrc');
+var path = require('path');
+var url = require('url');
+var globals = require('globals');
+var prettier = require('eslint-config-prettier');
+var yml = require('eslint-plugin-yml');
+var js = require('@eslint/js');
+
+var _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;
 var recommended = {
   extends: [
     "airbnb-base",
@@ -272,12 +275,12 @@ var drupalGlobals = {
 };
 
 // Set up common variables.
-const __filename$1 = fileURLToPath(import.meta.url);
-const __dirname$1 = path.dirname(__filename$1);
+const __filename$2 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
+const __dirname$2 = path.dirname(__filename$2);
 
 // Create a new FlatCompat instance.
-const compat$1 = new FlatCompat({
-  baseDirectory: __dirname$1,
+const compat$1 = new eslintrc.FlatCompat({
+  baseDirectory: __dirname$2,
 });
 
 // Set up the config.
@@ -332,12 +335,12 @@ var flatRecommended = [
 ];
 
 // Set up common variables.
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename$1 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
+const __dirname$1 = path.dirname(__filename$1);
 
 // Create a new FlatCompat instance.
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
+const compat = new eslintrc.FlatCompat({
+  baseDirectory: __dirname$1,
 });
 
 // Set up the config.
@@ -525,4 +528,4 @@ var index = {
   },
 };
 
-export { index as default };
+module.exports = index;
