@@ -17,6 +17,7 @@ export default () => {
       "url",
       "path",
       "@eslint/eslintrc",
+      "@eslint/js",
       "globals",
       "eslint-plugin-yml",
       "eslint-config-prettier",

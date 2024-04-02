@@ -6,6 +6,7 @@ var url = require('url');
 var globals = require('globals');
 var prettier = require('eslint-config-prettier');
 var yml = require('eslint-plugin-yml');
+var js = require('@eslint/js');
 
 var _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;
 var recommended = {
@@ -274,16 +275,16 @@ var drupalGlobals = {
 };
 
 // Set up common variables.
-const __filename$1 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
-const __dirname$1 = path.dirname(__filename$1);
+const __filename$2 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
+const __dirname$2 = path.dirname(__filename$2);
 
 // Create a new FlatCompat instance.
-const compat = new eslintrc.FlatCompat({
-  baseDirectory: __dirname$1,
+const compat$1 = new eslintrc.FlatCompat({
+  baseDirectory: __dirname$2,
 });
 
 // Set up the config.
-const config = {
+const config$3 = {
   languageOptions: {
     globals: {
       ...globals.browser,
@@ -327,9 +328,199 @@ const config = {
 };
 
 var flatRecommended = [
-  ...compat.extends("airbnb-base"),
+  ...compat$1.extends("airbnb-base"),
   prettier,
   yml.configs["flat/recommended"],
+  config$3,
+];
+
+// Set up common variables.
+const __filename$1 = url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href)));
+const __dirname$1 = path.dirname(__filename$1);
+
+// Create a new FlatCompat instance.
+const compat = new eslintrc.FlatCompat({
+  baseDirectory: __dirname$1,
+});
+
+// Set up the config.
+const config$2 = {
+  rules: {
+    "jquery/no-ajax": 0,
+    "jquery/no-ajax-events": 2,
+    "jquery/no-animate": 0,
+    "jquery/no-attr": 0,
+    "jquery/no-bind": 2,
+    "jquery/no-class": 0,
+    "jquery/no-clone": 0,
+    "jquery/no-closest": 0,
+    "jquery/no-css": 0,
+    "jquery/no-data": 0,
+    "jquery/no-deferred": 0,
+    "jquery/no-delegate": 2,
+    "jquery/no-each": 0,
+    "jquery/no-extend": 0,
+    "jquery/no-fade": 0,
+    "jquery/no-filter": 0,
+    "jquery/no-find": 0,
+    "jquery/no-global-eval": 2,
+    "jquery/no-grep": 2,
+    "jquery/no-has": 0,
+    "jquery/no-hide": 0,
+    "jquery/no-html": 0,
+    "jquery/no-in-array": 0,
+    "jquery/no-is-array": 0,
+    "jquery/no-is-function": 2,
+    "jquery/no-is": 0,
+    "jquery/no-load": 2,
+    "jquery/no-map": 2,
+    "jquery/no-merge": 2,
+    "jquery/no-param": 2,
+    "jquery/no-parent": 0,
+    "jquery/no-parents": 0,
+    "jquery/no-parse-html": 0,
+    "jquery/no-prop": 0,
+    "jquery/no-proxy": 0,
+    "jquery/no-ready": 0,
+    "jquery/no-serialize": 0,
+    "jquery/no-show": 0,
+    "jquery/no-size": 2,
+    "jquery/no-sizzle": 0,
+    "jquery/no-slide": 0,
+    "jquery/no-submit": 2,
+    "jquery/no-text": 2,
+    "jquery/no-toggle": 0,
+    "jquery/no-trigger": 0,
+    "jquery/no-trim": 2,
+    "jquery/no-val": 2,
+    "jquery/no-when": 0,
+    "jquery/no-wrap": 0,
+  },
+};
+
+var flatJquery = [
+  ...compat.extends("jquery"),
+  config$2,
+];
+
+// Set up the config.
+const config$1 = {
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...drupalGlobals.core,
+    },
+  },
+  rules: {
+    "array-bracket-spacing": ["error", "never"],
+    "block-scoped-var": "error",
+    "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
+    "comma-dangle": ["error", "never"],
+    "comma-spacing": "error",
+    "comma-style": ["error", "last"],
+    "computed-property-spacing": ["error", "never"],
+    curly: ["error", "all"],
+    "eol-last": "error",
+    eqeqeq: ["error", "smart"],
+    "guard-for-in": "error",
+    indent: ["error", 2, { SwitchCase: 1 }],
+    "key-spacing": ["error", { beforeColon: false, afterColon: true }],
+    "keyword-spacing": ["error", { before: true, after: true }],
+    "linebreak-style": ["error", "unix"],
+    "lines-around-comment": [
+      "error",
+      { beforeBlockComment: true, afterBlockComment: false },
+    ],
+    "new-parens": "error",
+    "no-array-constructor": "error",
+    "no-caller": "error",
+    "no-catch-shadow": "error",
+    "no-eval": "error",
+    "no-extend-native": "error",
+    "no-extra-bind": "error",
+    "no-extra-parens": ["error", "functions"],
+    "no-implied-eval": "error",
+    "no-iterator": "error",
+    "no-label-var": "error",
+    "no-labels": "error",
+    "no-lone-blocks": "error",
+    "no-loop-func": "error",
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-native-reassign": "error",
+    "no-nested-ternary": "error",
+    "no-new-func": "error",
+    "no-new-object": "error",
+    "no-new-wrappers": "error",
+    "no-octal-escape": "error",
+    "no-process-exit": "error",
+    "no-proto": "error",
+    "no-return-assign": "error",
+    "no-script-url": "error",
+    "no-sequences": "error",
+    "no-shadow-restricted-names": "error",
+    "no-spaced-func": "error",
+    "no-trailing-spaces": "error",
+    "no-undef-init": "error",
+    "no-undefined": "error",
+    "no-unused-expressions": "error",
+    "no-unused-vars": ["error", { vars: "all", args: "none" }],
+    "no-with": "error",
+    "object-curly-spacing": ["error", "never"],
+    "one-var": ["error", "never"],
+    "quote-props": ["error", "consistent-as-needed"],
+    quotes: ["error", "single", "avoid-escape"],
+    semi: ["error", "always"],
+    "semi-spacing": ["error", { before: false, after: true }],
+    "space-before-blocks": ["error", "always"],
+    "space-before-function-paren": [
+      "error",
+      { anonymous: "always", named: "never" },
+    ],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "space-unary-ops": ["error", { words: true, nonwords: false }],
+    "spaced-comment": ["error", "always"],
+    strict: ["error", "function"],
+    yoda: ["error", "never"],
+    "max-nested-callbacks": ["warn", 3],
+    "valid-jsdoc": [
+      "warn",
+      {
+        prefer: {
+          returns: "return",
+          property: "prop",
+        },
+        requireReturn: false,
+      },
+    ],
+  },
+};
+
+var flatLegacy = [
+  js.configs.recommended,
+  config$1,
+];
+
+// Set up the config.
+const config = {
+  rules: {
+    "no-shadow": "off",
+    "no-new": "off",
+    "no-continue": "off",
+    "new-cap": "off",
+    "max-len": "off",
+    "default-case": "off",
+    "default-param-last": "off",
+    "prefer-destructuring": "off",
+    "prefer-regex-literals": "off",
+    "import/named": "off",
+    "import/no-import-module-exports": "off",
+  },};
+
+var flatPassing = [
+  flatRecommended,
+  flatJquery,
   config,
 ];
 
@@ -340,6 +531,9 @@ var index = {
     legacy,
     passing,
     "flat/recommended": flatRecommended,
+    "flat/jquery": flatJquery,
+    "flat/legacy": flatLegacy,
+    "flat/passing": flatPassing,
   },
 };
 
