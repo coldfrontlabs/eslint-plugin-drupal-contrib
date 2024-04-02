@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-beta.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.3...v2.1.0-beta.0) (2024-04-02)
+
+
+### Features
+
+* **config:** add support for flat config ([d0c4216](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/d0c4216aaff4d33d763fd5b1ba24eacd1d5172ea))
+
+
+### Build System
+
+* bump @commitlint/cli from 17.8.1 to 19.0.3 ([3ef264a](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/3ef264a0c0790dfe33b4c6ed68f7bf889a9c6851))
+* bump @commitlint/config-conventional from 17.8.1 to 19.0.3 ([a39a450](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/a39a450743eab5d830636efadc839615738c13ba))
+* bump husky from 8.0.3 to 9.0.11 ([d67cbf2](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/d67cbf24e21944c320dfbd1f945732567770061f))
+* bump lint-staged from 14.0.1 to 15.2.2 ([f3a937e](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/f3a937e73c8d992de31211954ae49cffa46eea4d))
+* bump rollup from 3.29.4 to 4.9.2 ([50c7853](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/50c78530778f1ba70bac75b5a262cecb27d52235))
+
 ### [2.0.3](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.2...v2.0.3) (2023-09-26)
 
 
