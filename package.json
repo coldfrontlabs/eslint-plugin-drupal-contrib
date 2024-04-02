@@ -24,7 +24,12 @@
     "prettier": "prettier '**/*.{js,cjs}'",
     "build": "rollup --config rollup.config.js",
     "release": "git add src/. dist/. && git add index.js && standard-version -a",
-    "prerelease": "npm run lint && npm run build"
+    "prerelease": "npm run lint && npm run build",
+    "test": "npm run test:jquery && npm run test:legacy && npm run test:passing && npm run test:recommended",
+    "test:jquery": "eslint --config test/jquery/eslint.config.js test/jquery/*.js",
+    "test:legacy": "eslint --config test/legacy/eslint.config.js test/legacy/*.js",
+    "test:passing": "eslint --config test/passing/eslint.config.js test/passing/*.js",
+    "test:recommended": "eslint --config test/recommended/eslint.config.js test/recommended/*.js"
   },
   "repository": {
     "type": "git",
