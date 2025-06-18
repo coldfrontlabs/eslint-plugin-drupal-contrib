@@ -1,6 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.1.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.1.0-beta.0...v2.1.0) (2025-06-18)
+
+
+### Build System
+
+* bump @eslint/js from 8.57.0 to 9.1.1 ([bf2f07d](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/bf2f07dce551ff1712ec7854731b6f9bb2edacc9))
+* **npm:** replace standard-version with commit-and-tag-version ([a2dbe2f](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/a2dbe2fc67e2845f81cc12cda5dcff598976a801))
+* **npm:** update husky hooks ([17ffcbe](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/commit/17ffcbe3cd620bbdf93c3c49462ba9cd606dd8c0))
 
 ## [2.1.0-beta.0](https://github.com/coldfrontlabs/eslint-plugin-drupal-contrib/compare/v2.0.3...v2.1.0-beta.0) (2024-04-02)
 
