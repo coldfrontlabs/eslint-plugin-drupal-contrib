@@ -17,7 +17,7 @@
     "dist/"
   ],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "commit": "git cz",
     "lint": "npm run eslint -- --fix && npm run prettier -- --write",
     "eslint": "eslint .",
