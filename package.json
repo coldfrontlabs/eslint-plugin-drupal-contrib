@@ -23,7 +23,7 @@
     "eslint": "eslint .",
     "prettier": "prettier '**/*.{js,cjs}'",
     "build": "rollup --config rollup.config.js",
-    "release": "git add src/. dist/. && git add index.js && standard-version -a",
+    "release": "git add src/. dist/. && git add index.js && commit-and-tag-version -a",
     "prerelease": "npm run lint && npm run build",
     "test": "npm run test:jquery && npm run test:legacy && npm run test:passing && npm run test:recommended",
     "test:jquery": "eslint --config test/jquery/eslint.config.js test/jquery/*.js",
@@ -67,6 +67,7 @@
     "@commitlint/config-conventional": "^19.0.3",
     "@eslint/js": "^9.1.1",
     "@rollup/plugin-json": "^6.1.0",
+    "commit-and-tag-version": "^12.5.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.49.0",
@@ -74,7 +75,6 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.0.3",
-    "rollup": "^4.9.2",
-    "standard-version": "^9.5.0"
+    "rollup": "^4.9.2"
   }
 }
